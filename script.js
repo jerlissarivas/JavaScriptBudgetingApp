@@ -20,7 +20,16 @@ const entryListElement = document.querySelector("section ul");
 
 // Create function to add income or expense
 
-function addEntry(amount, operation) {}
+function addEntry(amount, operation) {
+  const listEntry = document.createElement("li");
+
+  const listEntryValue = document.createElement("strong");
+  listEntryValue.innerText = amount;
+
+  listEntry.appendChild(listEntryValue);
+
+  entryListElement.appendChild(listEntry);
+}
 
 // Add event listener to Add button
 
