@@ -24,12 +24,21 @@ function addEntry(amount, operation) {
   const listEntry = document.createElement("li");
 
   const listEntryValue = document.createElement("strong");
-  listEntryValue.innerText = amount;
+  listEntryValue.innerText = "$" + amount;
 
   const listEntryDescription = document.createElement("em");
   listEntryDescription.innerText = "Description";
 
+  const listEntryOperator = document.createElement("span");
+
+  if (operation === "income") {
+    listEntryOperator.innerText = "+";
+  } else if (operation === "expense") {
+    listEntryOperator.innerText = "-";
+  }
+
   listEntry.appendChild(listEntryDescription);
+  listEntry.appendChild(listEntryOperator);
   listEntry.appendChild(listEntryValue);
 
   entryListElement.appendChild(listEntry);
