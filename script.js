@@ -26,6 +26,10 @@ function addEntry(amount, operation) {
   const listEntryValue = document.createElement("strong");
   listEntryValue.innerText = amount;
 
+  const listEntryDescription = document.createElement("em");
+  listEntryDescription.innerText = "Description";
+
+  listEntry.appendChild(listEntryDescription);
   listEntry.appendChild(listEntryValue);
 
   entryListElement.appendChild(listEntry);
