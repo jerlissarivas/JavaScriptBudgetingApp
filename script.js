@@ -22,6 +22,7 @@ const entryListElement = document.querySelector("section ul");
 
 function addEntry(amount, operation) {
   const listEntry = document.createElement("li");
+  listEntry.classList.add(operation);
 
   const listEntryValue = document.createElement("strong");
   listEntryValue.innerText = "$" + amount;
