@@ -47,6 +47,10 @@ function addEntry(amount, operation) {
 
 // Add event listener to Add button
 
+function updateBalance () {
+    
+}
+
 additionButtonElement.onclick = function () {
   const amount = valueInputElement.value;
   const operation = selectElement.value;
@@ -54,4 +58,6 @@ additionButtonElement.onclick = function () {
   addEntry(amount, operation);
 
   valueInputElement.value = "";
+
+  updateBalance();
 };
