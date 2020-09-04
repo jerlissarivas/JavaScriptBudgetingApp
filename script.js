@@ -52,4 +52,6 @@ additionButtonElement.onclick = function () {
   const operation = selectElement.value;
 
   addEntry(amount, operation);
+
+  valueInputElement.value = "";
 };
