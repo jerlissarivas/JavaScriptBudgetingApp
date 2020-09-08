@@ -48,9 +48,14 @@ function addEntry(amount, operation) {
 // Add event listener to Add button
 
 function updateBalance() {
+  let total = 0;
+
   for (let item of entryListElement.children) {
     console.log(item);
+    const valueElement = item.querySelector("strong");
   }
+
+  balanceElement.innerText = "$" + total;
 }
 
 additionButtonElement.onclick = function () {
