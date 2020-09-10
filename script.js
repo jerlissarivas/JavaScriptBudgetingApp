@@ -56,7 +56,7 @@ function updateBalance() {
     const operationElement = item.querySelector("span");
 
     const value = parseInt(valueElement.innerText);
-    const opration = operationElement.innerText;
+    const operation = operationElement.innerText;
 
     if (operation === "+") {
       total = total + value;
