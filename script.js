@@ -53,6 +53,16 @@ function updateBalance() {
   for (let item of entryListElement.children) {
     console.log(item);
     const valueElement = item.querySelector("strong");
+    const operationElement = item.querySelector("span");
+
+    const value = parseInt(valueElement.innerText);
+    const opration = operationElement.innerText;
+
+    if (operation === "+") {
+      total = total + value;
+    } else if (operation === "-") {
+      total = total - value;
+    }
   }
 
   balanceElement.innerText = "$" + total;
